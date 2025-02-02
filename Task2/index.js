@@ -1,5 +1,4 @@
-function HelloFunction() {
+document.getElementById("hello").addEventListener("click", function() {
 
-    console.log("Hello World")
-
-}
+    console.log("Hello World");
+});
