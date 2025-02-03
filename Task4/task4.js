@@ -1,11 +1,13 @@
-document.getElementById("sumOfArray").addEventListener("click", function() {
+let sum = document.getElementById("sumOfArray");
+
+function arraySum() {
 
     let array = [];
     let sum = 0;
 
 
 
-    for(let i = 1; i <= 100; i++){
+    for(let i = 0; i <= 100; i++){
 
         array.push(i);
         sum += i;
@@ -14,4 +16,8 @@ document.getElementById("sumOfArray").addEventListener("click", function() {
     console.log("The sum is:", sum);
 
 
-});
+};
+
+
+
+sum.addEventListener("click", arraySum);

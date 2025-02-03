@@ -1,11 +1,13 @@
-document.getElementById("sumOfEvenNumbers").addEventListener("click", function() {
+let even = document.getElementById("sumOfEvenNumbers")
+
+function sumOfEven() {
 
     let array = [];
     let sum = 0;
 
 
 
-    for(let i = 1; i <= 100; i++){
+    for(let i = 0; i <= 100; i++){
 
         array.push(i);
         if(i % 2 === 0){
@@ -17,4 +19,8 @@ document.getElementById("sumOfEvenNumbers").addEventListener("click", function()
     console.log("The sum of even numbers is:", sum);
 
 
-});
+}
+
+
+
+even.addEventListener("click", sumOfEven);
