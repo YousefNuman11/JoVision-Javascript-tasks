@@ -1,20 +1,25 @@
 let button = document.getElementById("ip");
 
-
-
-function req (){
-    try{
-    let fetchReq = fetch("https://api.ipify.org/");
-
-    fetchReq
-    .then(response => response.text())
-    .then(data => {button.innerHTML = data;});
+function handleResponse(response) {
+    if (!response.ok) {
+        throw new Error("Network response was not OK");
     }
-    catch(err){
-        alert("The url is invalid");
-    }
-    
+    return response.text();
+}
 
+function returnData(data) {
+    button.innerHTML = data; 
+}
+
+function handleError(error) {
+    alert("The URL is invalid.");
+}
+
+function req() {
+    fetch("https://api.ipify.orgx/")
+        .then(handleResponse)
+        .then(returnData)
+        .catch(handleError);
 }
 
 button.addEventListener("click", req);

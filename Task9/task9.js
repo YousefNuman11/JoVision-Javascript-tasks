@@ -1,11 +1,24 @@
 let button = document.getElementById("ip");
 
+function handleResponse (response){
+
+  return response.text();
+}
+function returnData (data){
+
+  console.log(data);
+}
+
+
+
+
 
 function req (){
-  let fetchReq = fetch("https://api.ipify.org/");
 
-  fetchReq.then(response => response.text())
-  .then(data => {console.log(data)});
+
+  fetch("https://api.ipify.org/")
+  .then(handleResponse)
+  .then(returnData);
 }
 
 button.addEventListener("click", req);
