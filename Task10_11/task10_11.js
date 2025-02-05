@@ -16,7 +16,7 @@ function handleError(error) {
 }
 
 function req() {
-    fetch("https://api.ipify.orgx/")
+    fetch("https://api.ipify.org/")
         .then(handleResponse)
         .then(returnData)
         .catch(handleError);
